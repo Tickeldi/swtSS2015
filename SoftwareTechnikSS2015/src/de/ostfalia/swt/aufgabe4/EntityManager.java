@@ -58,6 +58,6 @@ public class EntityManager {
 	}
 	
 	public void remove(Entity o) {
-		idToEntity.get(o.getClass()).remove(o);
+		idToEntity.get(o.getClass()).remove(o.getId());
 	}
 }
