@@ -30,6 +30,10 @@ public class EntityManager {
 		
 		Class<? extends Entity> classOfEntity = entity.getClass();
 		
+		if (idToEntity.get(classOfEntity) == null) {
+			idToEntity.put(classOfEntity, new HashMap<Integer, Entity>());
+		}
+		
 		if (entity.getId() == null) {
 			Map<Integer, Entity> classSubMap = idToEntity.get(classOfEntity);
 			int newId = 0;
@@ -37,10 +41,6 @@ public class EntityManager {
 			while(classSubMap.containsKey(newId)) newId++;
 			
 			entity.setID(newId);
-		}
-
-		if (idToEntity.get(classOfEntity) == null) {
-			idToEntity.put(classOfEntity, new HashMap<Integer, Entity>());
 		}
 		
 		idToEntity.get(classOfEntity).put(entity.getId(), entity);
