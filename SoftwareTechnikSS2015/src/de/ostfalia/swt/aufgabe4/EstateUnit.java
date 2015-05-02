@@ -1,5 +1,7 @@
 package de.ostfalia.swt.aufgabe4;
 
+import java.math.BigDecimal;
+
 public class EstateUnit implements Entity{
 	
 	private Integer id;
@@ -9,12 +11,20 @@ public class EstateUnit implements Entity{
 	
 	public EstateUnit(ApartmentOrTrade aot, 
 			double area, 
-			java.math.BigDecimal rental) {
+			BigDecimal rental) {
 		
 		this.aot = aot;
 		this.area = area;
 		this.rental = rental;
 		
+	}
+	
+	EstateUnit(Integer id, 
+			ApartmentOrTrade aot, 
+			double area, 
+			BigDecimal rental) {
+		this(aot, area, rental);
+		this.id = id;
 	}
 	
 	ApartmentOrTrade getAot() {
