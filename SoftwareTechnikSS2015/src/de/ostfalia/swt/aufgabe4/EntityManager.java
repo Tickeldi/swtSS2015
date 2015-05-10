@@ -36,7 +36,7 @@ public class EntityManager {
 		
 		if (entity.getId() == null) {
 			Map<Integer, Entity> classSubMap = idToEntity.get(classOfEntity);
-			int newId = 0;
+			int newId = 1;
 			
 			while(classSubMap.containsKey(newId)) newId++;
 			
