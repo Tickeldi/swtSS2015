@@ -2,16 +2,19 @@ package de.ostfalia.swt.aufgabe5;
 
 import java.math.BigDecimal;
 
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 
 @XmlRootElement(name = "estateUnit")
 public class EstateUnit {
 	
+	@XmlElement(name = "apartmentOrTradeArea")
 	private ApartmentOrTrade aot;
+	@XmlElement(name = "area")
 	private double area;
+	@XmlElement(name = "rental")
 	private java.math.BigDecimal rental;
-	private Integer id;
 	
 	public EstateUnit(){
 		
