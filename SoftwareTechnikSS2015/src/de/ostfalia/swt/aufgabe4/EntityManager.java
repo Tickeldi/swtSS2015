@@ -40,7 +40,7 @@ public class EntityManager {
 			
 			while(classSubMap.containsKey(newId)) newId++;
 			
-			entity.setID(newId);
+			entity.setId(newId);
 		}
 		
 		idToEntity.get(classOfEntity).put(entity.getId(), entity);
