@@ -47,8 +47,8 @@ public class EntityManagerTest {
 				new BigDecimal(100)
 				);
 		
-		estateEntity.setID(0);
-		unitEntity.setID(0);
+		estateEntity.setId(0);
+		unitEntity.setId(0);
 		
 		manager.saveOrUpdate(estateEntity);
 		manager.saveOrUpdate(unitEntity);
